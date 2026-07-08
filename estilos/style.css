@@ -16,7 +16,9 @@ body{
 header{
     height: 80px;
     /* background-color: rgb(96, 34, 116); */
-    background-color: rgb(45, 96, 167);
+    /* background-color: rgb(45, 96, 167); */
+    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 838) 100%), url(../medias/Fotos2.jpg);
+    background-size: cover;
 }
 
 .cabecaprincipal{
@@ -74,7 +76,13 @@ header{
     justify-content: space-between;
     /* background-color: rgb(36, 35, 36); */
     /* background-image: url(../medias/Fotos5.jpg); */
-    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.838) 100%), url(../medias/Fotos5.jpg);
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.6) 0%,      /* Escuro no topo (ajuste o 0.6 se quiser mais ou menos escuro) */
+        transparent 30%,            /* Transparece para revelar a imagem */
+        transparent 70%,            /* Mantém transparente no meio */
+        rgba(0, 0, 0, 0.838) 100%   /* Escuro na base (seu efeito original) */
+        ), url(../medias/Fotos5.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -143,7 +151,7 @@ iframe:hover{
     text-shadow: 3px 3px 3px black;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
+    font-size: clamp(1rem, 1.2vw + 0.6rem, 1.6rem);
     line-height: 35px;
     text-indent: 15px;
     padding: 20px 0px 20px 20px;
@@ -235,8 +243,18 @@ iframe:hover{
     cursor: pointer;
 }
 
-@media screen and (max-width: 520px) {
-
+.cardsobremim{
+    backdrop-filter: blur(15px);
+    border: 15px;
+    padding: 8px;
+    color: rgb(86, 83, 83);
+    width: 400px;
+    height: 600px;
+    margin: 0 auto; /* centraliza dentro da célula do grid */
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    justify-content: center;
 }
 
 @media screen and (max-width: 720px) {
@@ -257,18 +275,23 @@ iframe:hover{
         transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .cabeca003  a:hover{
+    .cabeca003 a:hover{
         color: rgb(9, 132, 226);
         transform: scale(1.1);
     }
 
-    /* Ficar responsivo a parte dos sobre mim, habilidades e projetos em destaque para dispositivos moveis */
     .cards{
         grid-template-columns: 1fr;
     }
+
+    .cardsobremim{
+        width: 100%;
+        height: auto;
+        min-height: 300px; /* opcional, pra não ficar muito pequeno */
+    }
 }
 
-@media screen and (max-width: 908px) {
+@media screen and (max-width: 800px) {
     .apresentacao{
         display: grid;
         grid-template-columns: 1fr;
