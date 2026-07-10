@@ -69,6 +69,30 @@ header{
     display: none;
 }
 
+.avisodesenvolvimento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #b99214a8; /* amarelo clarinho, clássico de alerta */
+    border: 1px solid #ffe69c;
+    border-left: 5px solid #ffc107; /* barrinha lateral chama atenção */
+    color: #664d03;
+    padding: 10px 16px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 8px auto 0; /* se estiver centralizado como nome/curso */
+    font-size: 0.9em;
+}
+
+.avisodesenvolvimento span {
+    font-size: 1.2em;
+    color: black;
+}
+
+.avisodesenvolvimento p {
+    margin: 0;
+}
+
 .apresentacao{
     padding: 15px 0px 15px 0px;
     display: grid;
@@ -174,11 +198,18 @@ iframe:hover{
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
     align-items: center;
-    margin-top: 25px;
+    padding: 18px;
+    font-size: 0.9em;
 }
 
 .botoes{
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    background-color: rgba(0, 0, 0, 0.585);
+    width: 90%;
+    border-radius: 20px;
 }
 
 .botaoprincipal, .botaosecundario{
@@ -246,7 +277,6 @@ iframe:hover{
 .cardsobremim{
     backdrop-filter: blur(25px); /* blur mais forte */
     background-color: rgba(20, 20, 35, 0.6);
-    border: 15px;
     border-radius: 20px;
     padding: 30px;
     color: white;
@@ -258,6 +288,15 @@ iframe:hover{
     align-items: center;
     grid-column: 1 / -1;
     justify-self: center;
+    border: 2px solid blue;
+    transition: backdrop-filter 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.cardsobremim:hover{
+    backdrop-filter: blur(35px);
+    box-shadow: 6px 6px 6px black;
+    transform: scale(1.01);
+    cursor: pointer;
 }
 
 .fotoperfil{
@@ -267,12 +306,17 @@ iframe:hover{
     overflow: hidden;
     border: 3px solid rgb(140, 100, 250);
     margin-bottom: 10px;
+    transition: transform 0.3s;
 }
 
 .fotoperfil img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.fotoperfil:hover{
+    transform: scale(1.04);
 }
 
 .cardsobremim > h3{
@@ -376,6 +420,140 @@ iframe:hover{
     filter: brightness(1.3) drop-shadow(0 0 4px rgba(140, 100, 250, 0.8));
 }
 
+.blocodosprojetos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 40px 10%;
+    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 838) 100%), url(../medias/fotinhas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.projetosblocado {
+    display: flex;
+    min-height: 200px;
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 2px solid rgb(0, 60, 255);
+}
+
+.imagemprojeto {
+    flex: 0 0 45%;
+}
+
+.textoprojeto {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projetosblocado h1,
+.projetosblocado p,
+.projetosblocado > .textoprojeto section p {
+    font-size: 0.9em;
+    color: white;
+}
+
+.projetos h1{
+    font-weight: bolder;
+}
+
+.textoprojeto p{
+    font-size: 0.7em;
+}
+
+.projetosblocado h1:hover , .projetosblocado p:hover{
+    transition: transform 0.4s ease, text-shadow 0.3s ease;
+}
+
+.projetosblocado h1:hover , .projetosblocado p:hover{
+    transform: scale(1.02);
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.previewprojetos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.projetogit {
+    margin-top: auto;
+    background-color: #1a2a4a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.projetogit:hover{
+    background-color: #18243c;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    transform: scale(1.04);
+}
+
+.projetosblocado:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 3px black;
+    transform: scale(1.05);
+}
+
+.gitmacos{
+    width: 20%;
+}
+
+
+@media (max-width: 900px) {
+    .blocodosprojetos {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .blocodosprojetos {
+        padding: 24px 5%;
+        gap: 16px;
+    }
+
+    .projetosblocado {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .imagemprojeto {
+        flex: none;
+        width: 100%;
+        height: 200px; 
+    }
+
+    .textoprojeto {
+        padding: 16px;
+    }
+
+    .projetosblocado h1,
+    .projetosblocado p,
+    .projetosblocado > .textoprojeto section p {
+        font-size: 1em; 
+    }
+}
+
+
 .rodape{
     background-color: rgb(15, 15, 25);
     color: white;
@@ -467,6 +645,7 @@ iframe:hover{
     .rodape-links a, .rodape-icones a{
         width: auto;
     }
+
 }
 
 
@@ -544,5 +723,9 @@ iframe:hover{
 
     .blocodireita{
         text-align: center;
+    }
+
+    .botoes{
+        width: 100%;
     }
 }
