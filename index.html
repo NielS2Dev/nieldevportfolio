@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <header>
+    <header id="headerPrincipal">
         <div class="cabecaprincipal">
 
             <div class="cabeca001">
@@ -22,17 +22,30 @@
                 <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
             </div>
 
-            <div class="cabeca003">
-                <a href="https://www.youtube.com/@NielS2l" target="_blank">Youtube</a>
-                <a href="https://github.com/NielS2Dev" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
-            </div>
+            <!-- Botão hambúrguer: só aparece no mobile via CSS -->
+            <button class="hamburguer" id="botaoHamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+
+        <!-- Menu mobile (dropdown), fechado por padrão -->
+        <nav class="menuMobile" id="menuMobile">
+            <a href="" target="_blank">Projetos</a>
+            <a href="" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@NielS2l" target="_blank">Youtube</a>
+            <a href="https://github.com/NielS2Dev" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
+        </nav>
     </header>
 
+    <!-- overlay escuro que aparece atrás do menu mobile aberto -->
+    <div class="overlayMenu" id="overlayMenu"></div>
+
     <main>
-        <section class="apresentacao">
-            <div class="blocoesquerda">
+        <section class="apresentacao efeito-parallax" data-parallax="0.25">
+            <div class="blocoesquerda fade-in">
                 <h1>👨‍🎓 Antoniel da Silva Alves</h1>
                 <h2>💻 Cientista da Computação</h2>
                 <div class="avisodesenvolvimento">
@@ -47,22 +60,22 @@
                 </div>
             </div>
 
-            <div class="blocodireita">
+            <div class="blocodireita fade-in">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/MC3hyT0wERk?si=Ow2ttQQH-HoanYII&amp;start=4943" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <section class="cards">
-            <div class="card">
+        <section class="cards efeito-parallax" data-parallax="0.15">
+            <div class="card fade-in">
                 <h3>👤 Sobre mim</h3>
                 <p>Desenvolvendor sem experiência...</p>
                 <!-- ainda vou adicionar alguma coisa aqui -->
                 <a href="">Saiba Mais</a>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <h3>&lt;/&gt; Habilidades</h3>
                 <span>HTML</span>
                 <span>CSS</span>
@@ -73,13 +86,13 @@
                 <span>Banco de Dados</span>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <h3>📁 Projetos em Destaque</h3>
                 <p>Sistema de alguma coisa...</p>
                 <a href="">Ver Projeto ➔ </a>
             </div>
 
-            <div class="cardsobremim">
+            <div class="cardsobremim fade-in">
                 <div class="fotoperfil">
                     <img src="medias/antoniel.jpg" alt="Foto de Antoniel">
                 </div>
@@ -219,9 +232,32 @@
 
         </section>
 
+        <!-- Galeria com as imagens novas (001 a 004), com legenda por cima usando overlay -->
+        <section class="galeriaExtra">
+            <h2 class="tituloSecao fade-in">📷 Galeria</h2>
+            <div class="galeriaGrid">
+                <div class="galeriaItem fade-in">
+                    <img src="medias/001.png" alt="Imagem 001" loading="lazy">
+                    <div class="galeriaOverlay"><span>001</span></div>
+                </div>
+                <div class="galeriaItem fade-in">
+                    <img src="medias/002.png" alt="Imagem 002" loading="lazy">
+                    <div class="galeriaOverlay"><span>002</span></div>
+                </div>
+                <div class="galeriaItem fade-in">
+                    <img src="medias/003.png" alt="Imagem 003" loading="lazy">
+                    <div class="galeriaOverlay"><span>003</span></div>
+                </div>
+                <div class="galeriaItem fade-in">
+                    <img src="medias/004.png" alt="Imagem 004" loading="lazy">
+                    <div class="galeriaOverlay"><span>004</span></div>
+                </div>
+            </div>
+        </section>
+
         <section class="blocodosprojetos">
 
-            <div class="projetosblocado">
+            <div class="projetosblocado fade-in">
                 <div class="imagemprojeto">
                     <img src="medias/Fotos1.jpg" alt="" class="previewprojetos">
                 </div>
@@ -235,9 +271,9 @@
                 </div>
             </div>
 
-            <div class="projetosblocado">
+            <div class="projetosblocado fade-in">
                 <div class="imagemprojeto">
-                    <img src="medias/Fotos1.jpg" alt="" class="previewprojetos">
+                    <img src="medias/005.png" alt="" class="previewprojetos">
                 </div>
                 <div class="textoprojeto">
                     <h1>Nome do meu projeto</h1>
@@ -249,9 +285,9 @@
                 </div>
             </div>
 
-            <div class="projetosblocado">
+            <div class="projetosblocado fade-in">
                 <div class="imagemprojeto">
-                    <img src="medias/Fotos1.jpg" alt="" class="previewprojetos">
+                    <img src="medias/006.png" alt="" class="previewprojetos">
                 </div>
                 <div class="textoprojeto">
                     <h1>Nome do meu projeto</h1>
@@ -263,9 +299,9 @@
                 </div>
             </div>
 
-            <div class="projetosblocado">
+            <div class="projetosblocado fade-in">
                 <div class="imagemprojeto">
-                    <img src="medias/Fotos1.jpg" alt="" class="previewprojetos">
+                    <img src="medias/007.png" alt="" class="previewprojetos">
                 </div>
                 <div class="textoprojeto">
                     <h1>Nome do meu projeto</h1>
@@ -314,5 +350,13 @@
         <p>&copy; 2026 Antoniel da Silva Alves. Todos os direitos reservados.</p>
     </div>
 </footer>
+
+    <!-- Barra de progresso de leitura no topo -->
+    <div class="barraProgresso" id="barraProgresso"></div>
+
+    <!-- Botão de voltar ao topo -->
+    <button class="botaoTopo" id="botaoTopo" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
