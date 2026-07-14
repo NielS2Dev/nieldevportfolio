@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Fazer um Bolo — Projeto | Niel</title>
+    <link rel="stylesheet" href="../estilos/projeto-bolo.css">
+</head>
+<body>
+    <header id="headerPrincipal">
+        <div class="cabecaprincipal">
+
+            <div class="cabeca001">
+                <a href="../index.html">Niel</a>
+            </div>
+
+            <div class="cabeca002">
+                <a href="../index.html">Home</a>
+                <a href="index.html#projetos">Projetos</a>
+                <a href="" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@NielS2l" target="_blank">Youtube</a>
+                <a href="https://github.com/NielS2Dev" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
+            </div>
+
+            <button class="hamburguer" id="botaoHamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="menuMobile" id="menuMobile">
+            <a href="../index.html">Home</a>
+            <a href="index.html#projetos">Projetos</a>
+            <a href="" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@NielS2l" target="_blank">Youtube</a>
+            <a href="https://github.com/NielS2Dev" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
+        </nav>
+    </header>
+
+    <div class="overlayMenu" id="overlayMenu"></div>
+
+    <!-- Banner do projeto: imagem de wallpaper ocupando a largura toda, com o título por cima -->
+    <section class="bannerProjeto" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(10,10,18,0.75) 60%, rgba(10,10,18,0.97) 100%), url(medias/Fotos1.jpg);">
+        <div class="containerProjeto">
+            <p class="trilha">Projetos <span>/</span> Receitas</p>
+            <h1 class="fade-in">🍰 Como Fazer um Bolo de Chocolate Caseiro</h1>
+            <p class="subtitulo fade-in">Um projeto fictício de exemplo, criado só para testar layout de conteúdo: texto, imagem e vídeo dentro de um container centralizado.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="containerProjeto">
+
+            <!-- Introdução -->
+            <section class="blocoTexto fade-in">
+                <h2>Sobre a receita</h2>
+                <p>Esse bolo de chocolate é simples, rende bem e fica com uma casquinha por fora e um miolo bem molhadinho por dentro. Ideal pra quem tá começando na cozinha e quer um resultado bonito sem complicação.</p>
+                <p>Abaixo você confere os ingredientes, o passo a passo, uma foto do resultado final e um vídeo mostrando o preparo completo.</p>
+            </section>
+
+            <!-- Ingredientes -->
+            <section class="blocoTexto fade-in">
+                <h2>Ingredientes</h2>
+                <div class="listaIngredientes">
+                    <span>2 xícaras de farinha de trigo</span>
+                    <span>1 xícara de chocolate em pó</span>
+                    <span>2 xícaras de açúcar</span>
+                    <span>3 ovos</span>
+                    <span>1 xícara de óleo</span>
+                    <span>1 xícara de água quente</span>
+                    <span>1 colher (sopa) de fermento</span>
+                    <span>1 pitada de sal</span>
+                </div>
+            </section>
+
+            <!-- Espaço reservado pra foto do resultado -->
+            <section class="blocoImagem fade-in">
+                <div class="imagemPlaceholder">
+                    <span class="iconePlaceholder">📷</span>
+                    <p>Espaço reservado para a foto do bolo pronto</p>
+                    <span class="dicaPlaceholder">troque esta div por &lt;img src="medias/sua-foto.jpg"&gt;</span>
+                </div>
+            </section>
+
+            <!-- Passo a passo -->
+            <section class="blocoTexto fade-in">
+                <h2>Modo de preparo</h2>
+                <ol class="passoAPasso">
+                    <li>
+                        <span class="numeroPasso">01</span>
+                        <p>Pré-aqueça o forno a 180°C e unte uma forma redonda com manteiga e farinha.</p>
+                    </li>
+                    <li>
+                        <span class="numeroPasso">02</span>
+                        <p>Em uma tigela, misture os ingredientes secos: farinha, chocolate em pó, açúcar e sal.</p>
+                    </li>
+                    <li>
+                        <span class="numeroPasso">03</span>
+                        <p>Adicione os ovos e o óleo, misture bem até formar uma massa homogênea.</p>
+                    </li>
+                    <li>
+                        <span class="numeroPasso">04</span>
+                        <p>Acrescente a água quente aos poucos, mexendo sempre — a massa vai ficar mais líquida, é normal.</p>
+                    </li>
+                    <li>
+                        <span class="numeroPasso">05</span>
+                        <p>Por último, adicione o fermento e misture delicadamente.</p>
+                    </li>
+                    <li>
+                        <span class="numeroPasso">06</span>
+                        <p>Despeje na forma e leve ao forno por cerca de 40 minutos, ou até o palito sair limpo.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Vídeo do tutorial -->
+            <section class="blocoTexto fade-in">
+                <h2>Vídeo do preparo</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/MC3hyT0wERk?si=Ow2ttQQH-HoanYII" title="Vídeo tutorial do bolo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <span class="dicaPlaceholder centralizado">troque o src do iframe pelo link do seu vídeo no YouTube</span>
+            </section>
+
+            <!-- Dica final, no estilo dos cards do portfólio -->
+            <section class="cardDica fade-in">
+                <h3>💡 Dica</h3>
+                <p>Deixe o bolo esfriar por uns 15 minutos antes de desenformar — assim ele não quebra e a casquinha fica intacta.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+
+            <div class="rodape-bloco rodape-sobre">
+                <h3>Niel</h3>
+                <p>Estudante de Ciências da Computação na UERN, apaixonado por desenvolvimento e tecnologia.</p>
+            </div>
+
+            <div class="rodape-bloco rodape-links">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="index.html#projetos">Projetos</a>
+                <a href="index.html#contato">Contato</a>
+            </div>
+
+            <div class="rodape-bloco rodape-social">
+                <h4>Redes</h4>
+                <div class="rodape-icones">
+                    <a href="https://www.youtube.com/@NielS2l" target="_blank">Youtube</a>
+                    <a href="https://github.com/NielS2Dev" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/antonieldasilva2026" target="_blank">Linkedin</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rodape-linha"></div>
+
+        <div class="rodape-copy">
+            <p>&copy; 2026 Antoniel da Silva Alves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="barraProgresso" id="barraProgresso"></div>
+    <button class="botaoTopo" id="botaoTopo" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
