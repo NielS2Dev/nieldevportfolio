@@ -92,6 +92,16 @@ header.header-rolado{
     position: relative;
 }
 
+/* Estilização da imagem do projeto */
+.imagem-projeto {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    border-radius: 16px; /* Deixa as bordas arredondadas combinando com o resto do site */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* Dá um efeito sutil de sombra */
+}
+
 .hamburguer span{
     display: block;
     width: 26px;
